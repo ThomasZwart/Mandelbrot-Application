@@ -102,16 +102,5 @@ namespace Mandelbrot
             scale = 0.01f;
             GenerateMandelbrot();
         }
-
-        private double Clamp(double x, double min, double max)
-        {
-            if (x < min) {
-                x = min;
-            }
-            else if (x > max) {
-                x = max;
-            }
-            return x;
-        }
     }
 }
