@@ -27,13 +27,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.mandelbrotPictureBox = new System.Windows.Forms.PictureBox();
+            this.resetButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.mandelbrotPictureBox)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // mandelbrotPictureBox
+            // 
+            this.mandelbrotPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.mandelbrotPictureBox.Name = "mandelbrotPictureBox";
+            this.mandelbrotPictureBox.Size = new System.Drawing.Size(800, 800);
+            this.mandelbrotPictureBox.TabIndex = 0;
+            this.mandelbrotPictureBox.TabStop = false;
+            // 
+            // resetButton
+            // 
+            this.resetButton.Location = new System.Drawing.Point(713, 767);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(75, 23);
+            this.resetButton.TabIndex = 1;
+            this.resetButton.Text = "Reset";
+            this.resetButton.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 802);
+            this.Controls.Add(this.resetButton);
+            this.Controls.Add(this.mandelbrotPictureBox);
+            this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.mandelbrotPictureBox)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox mandelbrotPictureBox;
+        private System.Windows.Forms.Button resetButton;
     }
 }
 
