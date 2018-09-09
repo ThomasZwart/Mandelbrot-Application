@@ -29,6 +29,7 @@
         {
             this.mandelbrotPictureBox = new System.Windows.Forms.PictureBox();
             this.resetButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mandelbrotPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,11 +50,21 @@
             this.resetButton.Text = "Reset";
             this.resetButton.UseVisualStyleBackColor = true;
             // 
+            // saveButton
+            // 
+            this.saveButton.Location = new System.Drawing.Point(12, 767);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.TabIndex = 2;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 802);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.mandelbrotPictureBox);
             this.Name = "Form1";
@@ -67,6 +78,7 @@
 
         private System.Windows.Forms.PictureBox mandelbrotPictureBox;
         private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.Button saveButton;
     }
 }
 

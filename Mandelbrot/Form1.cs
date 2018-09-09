@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using System.Diagnostics;
 
 namespace Mandelbrot
@@ -26,7 +21,8 @@ namespace Mandelbrot
             GenerateMandelbrot();
 
             resetButton.Click += ClickResetButton;
-
+            saveButton.Click += ClickSaveButton;
+            
 
             Controls.Add(mandelbrotPictureBox);             
         }
@@ -93,6 +89,22 @@ namespace Mandelbrot
                 scale *= 2;
 
             GenerateMandelbrot();
+        }
+
+        // Makes a screenshot in the debug folder with the name screenshot{int}  where int is a new number
+        public void ClickSaveButton(object o, EventArgs ea)
+        {
+            DirectoryInfo d = new DirectoryInfo(Directory.GetCurrentDirectory());
+            FileInfo[] Files = d.GetFiles();
+
+            int count = 0;
+
+            foreach (FileInfo file in Files) {
+                if ("screenshot" + count.ToString() + ".jpg" == file.Name) {
+                    count++;
+                }
+            }
+            mandelbrotBitmap.Save("screenshot" + count.ToString() + ".jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
         }
 
         public void ClickResetButton (object o, EventArgs ea)
